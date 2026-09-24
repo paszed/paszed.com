@@ -42,6 +42,7 @@ export function LanguageSwitcherMenu({
               href={getLocalizedPath(pathname, locale)}
               role="menuitem"
               onClick={() => {
+                document.cookie = `NEXT_LOCALE=${locale}; Path=/; Max-Age=31536000; SameSite=Lax`;
                 void track({
                   type: "language_change",
                   path: getLocalizedPath(pathname, locale),
