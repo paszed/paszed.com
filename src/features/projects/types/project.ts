@@ -1,4 +1,4 @@
-export interface ProjectTechnology {
+interface ProjectTechnology {
   name: string;
   purpose: string;
 }
@@ -31,6 +31,6 @@ export interface Project {
   links?: readonly ProjectLink[];
 }
 
-export interface ProjectLink { label: string; href: string; }
+interface ProjectLink { label: string; href: string; }
 
 export type ProjectContent = Omit<Project, "slug">;

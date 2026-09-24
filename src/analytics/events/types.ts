@@ -1,6 +1,6 @@
 export type AnalyticsSource = "browser" | "server";
 
-export type AnalyticsTrafficClass = "human" | "crawler" | "bot" | "preview" | "unknown";
+type AnalyticsTrafficClass = "human" | "crawler" | "bot" | "preview" | "unknown";
 
 export type AnalyticsEventType =
   | "session_start"

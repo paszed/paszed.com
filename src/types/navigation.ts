@@ -1,4 +1,4 @@
-export type NavigationItemId = "projects" | "about" | "specs";
+type NavigationItemId = "projects" | "about" | "specs";
 
 export interface NavigationItem {
   id: NavigationItemId;

@@ -36,3 +36,6 @@
 # Debug logs
 *.log
 .pnpm-debug.log*
+
+# Playwright blob reporter output
+/blob-report/

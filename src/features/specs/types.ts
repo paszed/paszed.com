@@ -24,7 +24,7 @@ export type TechnologyIconName =
   | "Excalidraw"
   | "Motion";
 
-export interface SpecTechnologyItem {
+interface SpecTechnologyItem {
   name: string;
   description: string;
   icon: TechnologyIconName;

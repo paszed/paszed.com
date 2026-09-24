@@ -5,6 +5,8 @@ export interface JourneyPath {
   entry: string;
   routes: string[];
   exit?: string;
+  observedStart: boolean;
+  observedExit: boolean;
 }
 
 export function buildJourneyPath(events: AnalyticsEvent[]): JourneyPath | null {
@@ -34,5 +36,7 @@ export function buildJourneyPath(events: AnalyticsEvent[]): JourneyPath | null {
     entry: routes[0],
     routes,
     exit: exitEvent?.path,
+    observedStart: sorted.some((event) => event.type === "session_start"),
+    observedExit: exitEvent !== undefined,
   };
 }

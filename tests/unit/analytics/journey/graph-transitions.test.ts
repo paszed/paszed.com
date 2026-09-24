@@ -7,6 +7,8 @@ const journey = (routes: string[]): JourneyPath => ({
   sessionId: "session-1",
   entry: routes[0] ?? "",
   routes,
+  observedStart: false,
+  observedExit: false,
 });
 
 describe("buildTransitions", () => {

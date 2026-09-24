@@ -9,7 +9,7 @@ export interface HomeHero {
   };
 }
 
-export interface HomeSectionItem {
+interface HomeSectionItem {
   title: string;
   description: string;
 }
@@ -29,7 +29,7 @@ export interface HomeWorkItem {
   category: string;
 }
 
-export interface HomeWork {
+interface HomeWork {
   eyebrow: string;
   title: string;
   items: readonly HomeWorkItem[];

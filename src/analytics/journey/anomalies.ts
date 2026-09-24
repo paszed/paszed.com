@@ -1,6 +1,6 @@
 import type { JourneyPath } from "./path";
 
-export type JourneyAnomalyType =
+type JourneyAnomalyType =
   | "backtrack"
   | "loop"
   | "repeated_route"

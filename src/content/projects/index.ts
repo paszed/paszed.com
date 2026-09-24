@@ -6,7 +6,7 @@ import { deProjects } from "./de";
 import { enProjects } from "./en";
 import { huProjects } from "./hu";
 
-export const projectsContent: Record<Locale, ProjectsContent> = {
+const projectsContent: Record<Locale, ProjectsContent> = {
   en: enProjects,
   de: deProjects,
   hu: huProjects,
@@ -23,4 +23,3 @@ export function getProjects(locale: Locale) {
   };
 }
 
-export { deProjects, enProjects, huProjects };

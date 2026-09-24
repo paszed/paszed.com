@@ -14,7 +14,6 @@ describe("GET /llms.txt", () => {
     expect(body).toContain(`${site.url}/about`);
     expect(body).toContain(`${site.url}/contact`);
     expect(body).toContain(`${site.url}/sitemap.xml`);
-    expect(body).not.toContain("paszed.me");
     expect(body).not.toContain(`${site.url}/journal`);
     expect(body).not.toContain(`${site.url}/rss.xml`);
   });

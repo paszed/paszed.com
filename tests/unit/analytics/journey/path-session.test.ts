@@ -35,6 +35,8 @@ describe("buildJourneyPath", () => {
       entry: "/",
       routes: ["/", "/about"],
       exit: "/about",
+      observedStart: false,
+      observedExit: true,
     });
     expect(events[0].path).toBe("/old-exit");
   });
@@ -47,6 +49,8 @@ describe("buildJourneyPath", () => {
       entry: "/",
       routes: ["/"],
       exit: undefined,
+      observedStart: false,
+      observedExit: false,
     });
   });
 });
