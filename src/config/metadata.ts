@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     locale: site.locale,
     images: [
       {
-        url: "/images/profile.jpg",
+        url: "/images/share.jpg",
         alt: `${site.owner} — ${site.title}`,
       },
     ],
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: site.title,
     description: site.description,
     creator: "@paszed_",
-    images: ["/images/profile.jpg"],
+    images: ["/images/share.jpg"],
   },
   robots: {
     index: true,

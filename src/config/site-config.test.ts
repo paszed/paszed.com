@@ -28,14 +28,14 @@ describe("site configuration", () => {
       title: site.title,
       description: site.description,
       locale: site.locale,
-      images: [{ url: "/images/profile.jpg", alt: `${site.owner} — ${site.title}` }],
+      images: [{ url: "/images/share.jpg", alt: `${site.owner} — ${site.title}` }],
     });
     expect(metadata.twitter).toEqual({
       card: "summary_large_image",
       title: site.title,
       description: site.description,
       creator: "@paszed_",
-      images: ["/images/profile.jpg"],
+      images: ["/images/share.jpg"],
     });
     expect(metadata.robots).toEqual({ index: true, follow: true });
   });

@@ -8,6 +8,6 @@ export function createPersonSchema(): Schema {
     "@id": `${site.url}/#person`,
     name: site.owner,
     url: site.url,
-    image: `${site.url}/images/profile.jpg`,
+    image: `${site.url}/images/share.jpg`,
   };
 }

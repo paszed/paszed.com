@@ -46,7 +46,7 @@ export function createPageMetadata({
         hu: "hu_HU",
       }[locale],
       images: [{
-        url: "/images/profile.jpg",
+        url: "/images/share.jpg",
         alt: `${site.owner} — ${title}`,
       }],
     },
@@ -55,7 +55,7 @@ export function createPageMetadata({
       title,
       description,
       creator: "@paszed_",
-      images: ["/images/profile.jpg"],
+      images: ["/images/share.jpg"],
     },
   };
 }
