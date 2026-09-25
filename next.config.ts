@@ -6,6 +6,9 @@ const withBundleAnalyzer = bundleAnalyzer({
 });
 
 const nextConfig: NextConfig = {
+  experimental: {
+    inlineCss: true,
+  },
   async rewrites() {
     return [
       { source: "/", destination: "/en" },
