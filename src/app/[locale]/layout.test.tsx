@@ -11,10 +11,6 @@ vi.mock("next/font/google", () => ({
     fontMock("Inter", options);
     return { variable: "font-sans" };
   },
-  Source_Serif_4: (options: unknown) => {
-    fontMock("Source_Serif_4", options);
-    return { variable: "font-serif" };
-  },
   JetBrains_Mono: (options: unknown) => {
     fontMock("JetBrains_Mono", options);
     return { variable: "font-mono" };
@@ -55,14 +51,14 @@ describe("LocaleLayout", () => {
     );
   });
 
-  it("applies all three font families to the document", async () => {
+  it("applies both font families to the document", async () => {
     const layout = await LocaleLayout({
       children: <p>Page content</p>,
       params: Promise.resolve({ locale: "en" }),
     });
 
     expect(layout).not.toBeNull();
-    expect(layout?.props.className).toBe("font-sans font-serif font-mono");
+    expect(layout?.props.className).toBe("font-sans font-mono");
   });
 
   it.each(locales)("renders the %s document and application shell", async (locale) => {
@@ -75,7 +71,7 @@ describe("LocaleLayout", () => {
 
     expect(document.documentElement).toHaveAttribute("lang", locale);
     expect(document.documentElement).toHaveClass(
-      "font-sans", "font-serif", "font-mono",
+      "font-sans", "font-mono",
     );
     expect(screen.getByTestId("theme-provider")).toContainElement(
       screen.getByTestId("mobile-navigation-provider"),

@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import {
   Inter,
   JetBrains_Mono,
-  Source_Serif_4,
 } from "next/font/google";
 
 import { AnalyticsProvider } from "@/analytics/components/analytics-provider";
@@ -20,12 +19,6 @@ export { metadata };
 const sans = Inter({
   subsets: ["latin"],
   variable: "--site-font-sans",
-  display: "swap",
-});
-
-const serif = Source_Serif_4({
-  subsets: ["latin"],
-  variable: "--site-font-serif",
   display: "swap",
 });
 
@@ -60,7 +53,7 @@ export default async function LocaleLayout({
     <html
       lang={locale}
       suppressHydrationWarning
-      className={`${sans.variable} ${serif.variable} ${mono.variable}`}
+      className={`${sans.variable} ${mono.variable}`}
     >
       <body>
         <ThemeProvider>
