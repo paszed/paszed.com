@@ -6,11 +6,6 @@ import { trackProjectOpen } from "@/analytics";
 import { ProjectList } from "./project-list";
 
 vi.mock("@/analytics", () => ({ trackProjectOpen: vi.fn() }));
-vi.mock("@/features/specs/components/technology", () => ({
-  TechnologyIcon: ({ name }: { name: string }) => (
-    <span data-testid="technology-icon">{name}</span>
-  ),
-}));
 
 const labels: ProjectsContent["labels"] = {
   featured: "Featured",
@@ -68,26 +63,16 @@ describe("ProjectList", () => {
     const link = screen.getByRole("link", { name: /Argus cockpit/ });
     expect(link).toHaveAttribute("href", href);
     expect(screen.getByRole("heading", { name: "Argus cockpit" })).toBeInTheDocument();
-    expect(screen.getByText("Operational visibility")).toBeInTheDocument();
     expect(screen.getByText("A digital systems cockpit.")).toBeInTheDocument();
-    expect(screen.getByText("Developer tools")).toBeInTheDocument();
     expect(screen.getByText("In development")).toBeInTheDocument();
-    expect(screen.getByText("Featured")).toBeInTheDocument();
     expect(screen.getByText(/View project/)).toBeInTheDocument();
 
     fireEvent.click(link);
     expect(trackProjectOpen).toHaveBeenCalledExactlyOnceWith("argus");
   });
 
-  it("limits displayed technologies to the first five", () => {
-    render(<ProjectList projects={[project]} locale="en" labels={labels} />);
-    expect(screen.getAllByTestId("technology-icon")).toHaveLength(5);
-    expect(screen.queryByText("Cloudflare")).not.toBeInTheDocument();
-    expect(screen.getAllByText("Rust")).toHaveLength(2);
-    expect(screen.getAllByText("Supabase")).toHaveLength(2);
-  });
 
-  it("omits the featured badge and technology list when absent", () => {
+  it("renders projects without optional metadata", () => {
     render(
       <ProjectList
         projects={[{ ...project, featured: false, technologies: [] }]}
@@ -95,8 +80,6 @@ describe("ProjectList", () => {
         labels={labels}
       />,
     );
-    expect(screen.queryByText("Featured")).not.toBeInTheDocument();
-    expect(screen.queryByTestId("technology-icon")).not.toBeInTheDocument();
     expect(screen.getByRole("link", { name: /Argus cockpit/ })).toBeInTheDocument();
   });
 

@@ -16,10 +16,13 @@ export function getProjects(locale: Locale) {
   const content = projectsContent[locale];
   return {
     ...content,
-    projects: content.projects.map((project, index) => ({
-      ...project,
-      ...Object.values(projectConfig)[index],
-    })),
+    projects: content.projects
+      .filter((project) => ["feedchamps", "human50"].includes(project.slug))
+      .map((project) => {
+        const config = projectConfig[project.slug as keyof typeof projectConfig];
+        if (!config) throw new Error(`Missing project configuration: ${project.slug}`);
+        return { ...project, ...config };
+      }),
   };
 }
 

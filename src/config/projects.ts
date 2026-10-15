@@ -1,4 +1,14 @@
 export const projects = {
+  feedchamps: {
+    slug: "feedchamps",
+    artwork: "/projects/feedchamps.svg",
+    website: "https://feedchamps.com",
+  },
+  human50: {
+    slug: "human50",
+    artwork: "/projects/human50.svg",
+    website: "https://human50.com",
+  },
   "foundation-js": {
     slug: "foundation-js",
   },

@@ -11,6 +11,8 @@ export interface ProjectMedia {
 
 export interface Project {
   slug: string;
+  website?: string;
+  artwork?: string;
   title: string;
   tagline: string;
   summary: string;
@@ -33,4 +35,4 @@ export interface Project {
 
 interface ProjectLink { label: string; href: string; }
 
-export type ProjectContent = Omit<Project, "slug">;
+export type ProjectContent = Omit<Project, "website" | "artwork">;

@@ -11,7 +11,7 @@ const descriptions = {
 
 describe("localized projects page", () => {
   it.each(["en", "de", "hu"] as const)(
-    "generates metadata and renders the placeholder for %s", async (locale) => {
+    "generates metadata and renders the project page for %s", async (locale) => {
       expect(await generateMetadata({ params: Promise.resolve({ locale }) }))
         .toEqual(createPageMetadata({
           title: getProjects(locale).title,
@@ -21,7 +21,7 @@ describe("localized projects page", () => {
         }));
       const page = await ProjectsPage({ params: Promise.resolve({ locale }) });
       expect(page?.type).toBe("div");
-      expect(page?.props.children).toHaveLength(3);
+      expect(page?.props.children).toHaveLength(4);
     },
   );
 

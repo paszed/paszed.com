@@ -21,6 +21,29 @@ export const huProjects: ProjectsContent = {
   },
   projects: [
   {
+    slug: "feedchamps",
+    title: "FeedChamps",
+    tagline: "A közösségi média versennyé válik.",
+    summary: "X-alapú versenyplatform ligákkal, kupákkal, mérkőzésekkel és teljesítményalapú pontozással.",
+    category: "Platform · Verseny",
+    status: "Hamarosan",
+    featured: true,
+    overview: [],
+    technologies: [],
+  },
+  {
+    slug: "human50",
+    title: "Human50",
+    tagline: "Egy pontosan meghatározott MVP. Egy fix ár.",
+    summary: "Szoftverfejlesztési platform világosan meghatározott MVP-k elkészítésére, 50 eurós fix áron.",
+    category: "Platform · Szoftver",
+    status: "Fejlesztés alatt",
+    featured: true,
+    overview: [],
+    technologies: [],
+  },
+  {
+    slug: "foundation-js",
     title: "Foundation.js",
     tagline: "Alap a harapós szoftverek építéséhez.",
     summary: "A fejleszteni kívánt szoftverek technikai alapja.",
@@ -60,6 +83,7 @@ export const huProjects: ProjectsContent = {
     ],
   },
   {
+    slug: "paszed-com",
     title: "paszed.com",
     tagline: "Személyes mérnöki platform a munka köré építve.",
     summary: "Személyes mérnöki platform, amelynek maga a munka áll a középpontjában.",

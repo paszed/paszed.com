@@ -21,6 +21,29 @@ export const enProjects: ProjectsContent = {
   },
   projects: [
   {
+    slug: "feedchamps",
+    title: "FeedChamps",
+    tagline: "Social media becomes a competition.",
+    summary: "An X-first competition platform with leagues, cups, fixtures, and performance-based scoring.",
+    category: "Platform · Competition",
+    status: "Coming soon",
+    featured: true,
+    overview: [],
+    technologies: [],
+  },
+  {
+    slug: "human50",
+    title: "Human50",
+    tagline: "One scoped MVP. One fixed price.",
+    summary: "A software delivery platform for building clearly scoped MVPs for €50.",
+    category: "Platform · Software",
+    status: "In development",
+    featured: true,
+    overview: [],
+    technologies: [],
+  },
+  {
+    slug: "foundation-js",
     title: "Foundation.js",
     tagline: "A foundation for building software with teeth.",
     summary: "The engineering foundation behind the software I want to build.",
@@ -60,6 +83,7 @@ export const enProjects: ProjectsContent = {
     ],
   },
   {
+    slug: "paszed-com",
     title: "paszed.com",
     tagline: "A personal engineering platform built around the work.",
     summary: "A personal engineering platform built around the work itself.",

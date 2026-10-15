@@ -21,6 +21,29 @@ export const deProjects: ProjectsContent = {
   },
   projects: [
   {
+    slug: "feedchamps",
+    title: "FeedChamps",
+    tagline: "Social Media wird zum Wettbewerb.",
+    summary: "Eine Wettbewerbsplattform für X mit Ligen, Cups, Spielplänen und leistungsbasierter Wertung.",
+    category: "Plattform · Wettbewerb",
+    status: "Demnächst",
+    featured: true,
+    overview: [],
+    technologies: [],
+  },
+  {
+    slug: "human50",
+    title: "Human50",
+    tagline: "Ein klar definiertes MVP. Ein Festpreis.",
+    summary: "Eine Plattform für die Entwicklung klar abgegrenzter MVPs zum Festpreis von 50 €.",
+    category: "Plattform · Software",
+    status: "In Entwicklung",
+    featured: true,
+    overview: [],
+    technologies: [],
+  },
+  {
+    slug: "foundation-js",
     title: "Foundation.js",
     tagline: "Ein Fundament für Software mit Biss.",
     summary: "Das technische Fundament hinter der Software, die ich entwickeln möchte.",
@@ -60,6 +83,7 @@ export const deProjects: ProjectsContent = {
     ],
   },
   {
+    slug: "paszed-com",
     title: "paszed.com",
     tagline: "Eine persönliche Engineering-Plattform rund um die Arbeit.",
     summary: "Eine persönliche Engineering-Plattform, bei der die Arbeit selbst im Mittelpunkt steht.",
