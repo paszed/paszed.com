@@ -14,7 +14,11 @@ export function proxy(request: NextRequest) {
     request.headers.get("accept-language"),
   );
 
-  if (locale === "en") return NextResponse.next();
+  if (locale === "en") {
+    const url = request.nextUrl.clone();
+    url.pathname = pathname === "/" ? "/en" : "/en" + pathname;
+    return NextResponse.rewrite(url);
+  }
 
   const url = request.nextUrl.clone();
   url.pathname = `/${locale}${pathname === "/" ? "" : pathname}`;

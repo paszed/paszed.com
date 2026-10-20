@@ -58,20 +58,36 @@ describe("proxy", () => {
     );
   });
 
-  it("keeps unprefixed URLs when English is selected", () => {
+  it("internally rewrites the homepage to English", () => {
+    const response = proxy(request("/", { cookie: "en" }));
+
+    expect(response.status).toBe(200);
+    expect(response.headers.get("location")).toBeNull();
+    expect(response.headers.get("x-middleware-rewrite")).toBe(
+      "https://paszed.com/en",
+    );
+  });
+
+  it("internally rewrites unprefixed URLs when English is selected", () => {
     const response = proxy(
       request("/contact", { language: "de-DE", cookie: "en" }),
     );
 
     expect(response.status).toBe(200);
     expect(response.headers.get("location")).toBeNull();
+    expect(response.headers.get("x-middleware-rewrite")).toBe(
+      "https://paszed.com/en/contact",
+    );
   });
 
-  it("defaults to English without a supported preference", () => {
+  it("internally rewrites to English without a supported preference", () => {
     const response = proxy(request("/specs", { language: "fr-FR" }));
 
     expect(response.status).toBe(200);
     expect(response.headers.get("location")).toBeNull();
+    expect(response.headers.get("x-middleware-rewrite")).toBe(
+      "https://paszed.com/en/specs",
+    );
   });
 
   it("limits interception to the configured public routes", () => {
