@@ -48,7 +48,7 @@ function ProjectCard({ project, locale, labels, isPriority }: {
       <div className="flex flex-1 flex-col p-6 sm:p-7">
         <div className="flex items-start justify-between gap-4">
           <h2 className="text-2xl font-semibold tracking-[-0.04em]">{project.title}</h2>
-          <span aria-hidden="true" className="text-lg text-fg-muted transition-transform duration-200 group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-fg-muted transition-transform duration-200 group-hover:-translate-y-1 group-hover:translate-x-1"><path d="M7 17 17 7" /><path d="M7 7h10v10" /></svg>
         </div>
         <p className="mt-3 text-sm leading-7 text-fg-secondary">{project.summary}</p>
         <div className="mt-auto pt-7">
