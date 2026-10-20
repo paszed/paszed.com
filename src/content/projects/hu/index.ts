@@ -43,6 +43,18 @@ export const huProjects: ProjectsContent = {
     technologies: [],
   },
   {
+    slug: "notafund",
+    title: "NOTAFUND",
+    tagline: "Magántulajdonban. Önálló működés.",
+    summary: "Független pénzügyi iroda sajátos márkaidentitással és élő, reszponzív weboldallal. A teljesebb pénzügyi központ a jövőbeli fejlesztési irány része.",
+    category: "Pénzügy · Független iroda",
+    status: "Élő",
+    started: 2026,
+    featured: true,
+    overview: [],
+    technologies: [],
+  },
+  {
     slug: "foundation-js",
     title: "Foundation.js",
     tagline: "Alap a harapós szoftverek építéséhez.",

@@ -1,7 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 
 import { DropdownCaret } from "@/ui/navigation/dropdown/dropdown-caret";
 
@@ -20,9 +20,18 @@ const localeLabels = {
   hu: "HU",
 } as const;
 
+const subscribeToHydration = () => () => {};
+const getHydratedSnapshot = () => true;
+const getServerHydrationSnapshot = () => false;
+
 export function LanguageSwitcher() {
   const pathname = usePathname() ?? "/";
   const [isOpen, setIsOpen] = useState(false);
+  const isHydrated = useSyncExternalStore(
+    subscribeToHydration,
+    getHydratedSnapshot,
+    getServerHydrationSnapshot,
+  );
   const containerRef = useRef<HTMLDivElement>(null);
   const currentLocale = getLocaleFromPath(pathname);
 
@@ -35,7 +44,6 @@ export function LanguageSwitcher() {
   }
 
   useEffect(() => {
-    containerRef.current?.setAttribute("data-hydrated", "true");
 
     function handlePointerDown(event: PointerEvent) {
       const container = containerRef.current;
@@ -51,6 +59,7 @@ export function LanguageSwitcher() {
   return (
     <div
       ref={containerRef}
+      data-hydrated={isHydrated ? "true" : undefined}
       className="relative"
       onMouseEnter={openMenu}
       onMouseLeave={closeMenu}

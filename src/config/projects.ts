@@ -9,6 +9,11 @@ export const projects = {
     artwork: "/projects/human50.svg",
     website: "https://human50.com",
   },
+  notafund: {
+    slug: "notafund",
+    artwork: "/projects/notafund.svg",
+    website: "https://notafund.com",
+  },
   "foundation-js": {
     slug: "foundation-js",
   },

@@ -14,12 +14,14 @@ interface ProjectListProps {
   labels: ProjectsContent["labels"];
 }
 
-function ProjectCard({ project, locale, labels }: {
+function ProjectCard({ project, locale, labels, isPriority }: {
   project: Project;
   locale: Locale;
   labels: ProjectsContent["labels"];
+  isPriority: boolean;
 }) {
   const isHuman50 = project.slug === "human50";
+  const isNotafund = project.slug === "notafund";
 
   return (
     <Link
@@ -36,7 +38,9 @@ function ProjectCard({ project, locale, labels }: {
             alt={`${project.title} brand artwork`}
             width={660}
             height={372}
-            className={`object-contain transition-transform duration-500 group-hover:scale-[1.035] ${isHuman50 ? "h-[76%] w-auto" : "h-[65%] w-auto"}`}
+            priority={isPriority}
+            sizes="(min-width: 768px) 50vw, 100vw"
+            className={`object-contain transition-transform duration-500 group-hover:scale-[1.035] ${isHuman50 ? "h-[76%] w-auto" : isNotafund ? "h-auto w-[84%]" : "h-[65%] w-auto"}`}
           />
         ) : null}
       </div>
@@ -61,8 +65,8 @@ function ProjectCard({ project, locale, labels }: {
 export function ProjectList({ projects, locale, labels }: ProjectListProps) {
   return (
     <div className="grid gap-6 md:grid-cols-2">
-      {projects.map((project) => (
-        <ProjectCard key={project.slug} project={project} locale={locale} labels={labels} />
+      {projects.map((project, index) => (
+        <ProjectCard key={project.slug} project={project} locale={locale} labels={labels} isPriority={index < 2} />
       ))}
     </div>
   );

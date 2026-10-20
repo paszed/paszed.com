@@ -17,7 +17,7 @@ export function getProjects(locale: Locale) {
   return {
     ...content,
     projects: content.projects
-      .filter((project) => ["feedchamps", "human50"].includes(project.slug))
+      .filter((project) => ["feedchamps", "human50", "notafund"].includes(project.slug))
       .map((project) => {
         const config = projectConfig[project.slug as keyof typeof projectConfig];
         if (!config) throw new Error(`Missing project configuration: ${project.slug}`);

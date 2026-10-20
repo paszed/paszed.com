@@ -43,6 +43,18 @@ export const deProjects: ProjectsContent = {
     technologies: [],
   },
   {
+    slug: "notafund",
+    title: "NOTAFUND",
+    tagline: "Privat geführt. Unabhängig betrieben.",
+    summary: "Ein unabhängiges Finanzbüro mit eigenständiger Markenidentität und einer responsiven, live verfügbaren Website. Die umfassendere Finanzzentrale ist eine zukünftige Ausbaustufe.",
+    category: "Finanzen · Unabhängiges Büro",
+    status: "Live",
+    started: 2026,
+    featured: true,
+    overview: [],
+    technologies: [],
+  },
+  {
     slug: "foundation-js",
     title: "Foundation.js",
     tagline: "Ein Fundament für Software mit Biss.",

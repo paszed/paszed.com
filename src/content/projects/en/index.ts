@@ -43,6 +43,18 @@ export const enProjects: ProjectsContent = {
     technologies: [],
   },
   {
+    slug: "notafund",
+    title: "NOTAFUND",
+    tagline: "Privately owned. Independently operated.",
+    summary: "An independent financial office with a distinctive brand and a live, responsive landing page. The broader financial headquarters remains a future direction.",
+    category: "Finance · Independent Office",
+    status: "Live",
+    started: 2026,
+    featured: true,
+    overview: [],
+    technologies: [],
+  },
+  {
     slug: "foundation-js",
     title: "Foundation.js",
     tagline: "A foundation for building software with teeth.",

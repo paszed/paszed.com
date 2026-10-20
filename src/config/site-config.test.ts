@@ -42,6 +42,11 @@ describe("site configuration", () => {
 
   it("defines the project slugs and repository link", () => {
     expect(projects["foundation-js"]).toEqual({ slug: "foundation-js" });
+    expect(projects.notafund).toEqual({
+      slug: "notafund",
+      artwork: "/projects/notafund.svg",
+      website: "https://notafund.com",
+    });
     expect(projects["paszed-com"]).toEqual({
       slug: "paszed-com",
       links: [{
