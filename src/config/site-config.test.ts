@@ -18,8 +18,8 @@ describe("site configuration", () => {
     expect(metadata.alternates).toEqual({ canonical: site.url });
     expect(metadata.icons).toEqual({
       icon: "/icon.svg",
-      shortcut: "/icon.svg",
-      apple: "/icon.svg",
+      shortcut: "/favicon.ico",
+      apple: "/brand/apple-touch-icon.png",
     });
     expect(metadata.openGraph).toEqual({
       type: "website",
@@ -28,14 +28,14 @@ describe("site configuration", () => {
       title: site.title,
       description: site.description,
       locale: site.locale,
-      images: [{ url: "/images/share.jpg", alt: `${site.owner} — ${site.title}` }],
+      images: [{ url: "/brand/share-card.png", width: 1200, height: 630, alt: `${site.owner} — ${site.title}` }],
     });
     expect(metadata.twitter).toEqual({
       card: "summary_large_image",
       title: site.title,
       description: site.description,
       creator: "@paszed_",
-      images: ["/images/share.jpg"],
+      images: ["/brand/share-card.png"],
     });
     expect(metadata.robots).toEqual({ index: true, follow: true });
   });

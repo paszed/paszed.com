@@ -18,8 +18,8 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    shortcut: "/favicon.ico",
+    apple: "/brand/apple-touch-icon.png",
   },
   openGraph: {
     type: "website",
@@ -30,7 +30,9 @@ export const metadata: Metadata = {
     locale: site.locale,
     images: [
       {
-        url: "/images/share.jpg",
+        url: "/brand/share-card.png",
+        width: 1200,
+        height: 630,
         alt: `${site.owner} — ${site.title}`,
       },
     ],
@@ -40,7 +42,7 @@ export const metadata: Metadata = {
     title: site.title,
     description: site.description,
     creator: "@paszed_",
-    images: ["/images/share.jpg"],
+    images: ["/brand/share-card.png"],
   },
   robots: {
     index: true,

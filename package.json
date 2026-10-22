@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "brand:generate": "node scripts/generate-brand.cjs",
+    "brand:check": "node scripts/generate-brand.cjs --check",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -56,6 +58,7 @@
     "eslint-config-next": "16.3.4",
     "jsdom": "^30.1.0",
     "knip": "^6.37.0",
+    "sharp": "^0.35.5",
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^5.0.1"

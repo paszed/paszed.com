@@ -46,7 +46,9 @@ export function createPageMetadata({
         hu: "hu_HU",
       }[locale],
       images: [{
-        url: "/images/share.jpg",
+        url: "/brand/share-card.png",
+        width: 1200,
+        height: 630,
         alt: `${site.owner} — ${title}`,
       }],
     },
@@ -55,7 +57,7 @@ export function createPageMetadata({
       title,
       description,
       creator: "@paszed_",
-      images: ["/images/share.jpg"],
+      images: ["/brand/share-card.png"],
     },
   };
 }
