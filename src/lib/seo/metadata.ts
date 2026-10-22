@@ -24,8 +24,10 @@ export function createPageMetadata({
     ]),
   );
 
+  const pageTitle = path === "/" ? site.title : title;
+
   return {
-    title,
+    title: path === "/" ? { absolute: pageTitle } : pageTitle,
     description,
     alternates: {
       canonical: url,
@@ -38,7 +40,7 @@ export function createPageMetadata({
       type: "website",
       url,
       siteName: site.name,
-      title,
+      title: pageTitle,
       description,
       locale: {
         en: "en_US",
@@ -54,7 +56,7 @@ export function createPageMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title,
+      title: pageTitle,
       description,
       creator: "@paszed_",
       images: ["/brand/share-card.png"],

@@ -8,7 +8,7 @@ describe("site configuration", () => {
     expect(metadata.metadataBase).toEqual(new URL(site.url));
     expect(metadata.title).toEqual({
       default: site.title,
-      template: `%s — ${site.name}`,
+      template: `%s | ${site.name}`,
     });
     expect(metadata.description).toBe(site.description);
     expect(metadata.applicationName).toBe(site.name);

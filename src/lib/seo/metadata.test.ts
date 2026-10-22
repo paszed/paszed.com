@@ -19,10 +19,12 @@ describe("createPageMetadata", () => {
       locale,
     });
 
+    expect(metadata.title).toEqual(path === "/" ? { absolute: site.title } : "Test page");
+    expect(metadata.twitter).toMatchObject({ title: path === "/" ? site.title : "Test page" });
     expect(metadata.alternates?.canonical).toBe(canonical);
     expect(metadata.openGraph).toMatchObject({
       url: canonical,
-      title: "Test page",
+      title: path === "/" ? site.title : "Test page",
       description: "Test description",
     });
   });
