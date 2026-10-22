@@ -1,4 +1,14 @@
 export const projects = {
+  "1bucksoft": {
+    slug: "1bucksoft",
+    artwork: "/projects/1bucksoft.svg",
+    website: "https://1bucksoft.com",
+  },
+  oxheaded: {
+    slug: "oxheaded",
+    artwork: "/projects/oxheaded.svg",
+    website: "https://oxheaded.com",
+  },
   feedchamps: {
     slug: "feedchamps",
     artwork: "/projects/feedchamps.svg",

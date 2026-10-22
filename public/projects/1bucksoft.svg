@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="none">
+  <defs>
+    <linearGradient id="duck-body" x1="66" y1="55" x2="172" y2="236" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFE76A"/>
+      <stop offset=".48" stop-color="#FFD600"/>
+      <stop offset="1" stop-color="#EBA900"/>
+    </linearGradient>
+    <linearGradient id="duck-bill" x1="181" y1="85" x2="204" y2="124" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFAB27"/>
+      <stop offset="1" stop-color="#EF6C00"/>
+    </linearGradient>
+    <linearGradient id="duck-lens" x1="125" y1="60" x2="174" y2="98" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#333842"/>
+      <stop offset=".5" stop-color="#101113"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+  </defs>
+  <path d="M44 140C26 136 17 121 20 107C42 109 47 126 65 125C73 111 91 104 110 102C99 85 103 57 118 40C135 20 169 22 188 38C207 56 208 83 194 104L183 127C215 132 234 157 231 184C228 217 197 232 129 232C66 232 32 215 31 184C30 166 37 151 44 140Z" fill="url(#duck-body)"/>
+  <path d="M48 188C64 212 108 221 164 215C193 212 213 202 225 187C216 216 189 228 129 228C82 228 52 216 42 197Z" fill="#DA9400" opacity=".35"/>
+  <path d="M69 151C91 131 135 138 153 163C165 180 156 198 136 201C108 205 77 185 69 151Z" fill="#F5BF00"/>
+  <path d="M73 151C96 139 130 144 146 165C126 155 105 157 89 169Z" fill="#FFE66A" opacity=".7"/>
+  <path d="M116 58C123 39 146 31 165 37" stroke="#FFF3A0" stroke-width="8" stroke-linecap="round" opacity=".7"/>
+  <path d="M176 91C191 82 201 83 212 88C220 91 233 91 240 96C245 102 235 109 222 111C230 114 228 121 215 124C199 127 184 119 174 111C169 104 169 96 176 91Z" fill="url(#duck-bill)"/>
+  <path d="M181 107C198 111 219 111 234 104" stroke="#C95600" stroke-width="3" stroke-linecap="round"/>
+  <g id="duck-glasses" transform="translate(5 0)">
+  <path d="M109 65L123 69" stroke="#101113" stroke-width="7" stroke-linecap="round"/>
+  <path d="M123 66L158 68L155 84Q153 94 141 92Q128 91 125 83Z" fill="url(#duck-lens)" stroke="#08090B" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M170 67L198 63L199 76Q199 87 188 89Q178 90 175 82Z" fill="url(#duck-lens)" stroke="#08090B" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M156 73C160 70 166 70 171 73" stroke="#08090B" stroke-width="6" stroke-linecap="round"/>
+  <path d="M128 71L147 73L146 77L129 75Z M177 71L192 68L193 72L178 75Z" fill="#B7C5D5" opacity=".3"/>
+  </g>
+</svg>

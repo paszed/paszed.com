@@ -1,3 +1,4 @@
+import { deNewProjects } from "./new-projects";
 import type { ProjectsContent } from "@/features/projects/types/projects";
 
 export const deProjects: ProjectsContent = {
@@ -54,6 +55,7 @@ export const deProjects: ProjectsContent = {
     overview: [],
     technologies: [],
   },
+  ...deNewProjects,
   {
     slug: "foundation-js",
     title: "Foundation.js",
