@@ -44,6 +44,18 @@ export const enProjects: ProjectsContent = {
     technologies: [],
   },
   {
+    slug: "mrrmarkets",
+    title: "MRR Markets",
+    tagline: "Climb the Leaderboard.",
+    summary: "A revenue leaderboard for builders. Track your climb and compete for the top. The branded coming-soon site is live; the leaderboard is in development.",
+    category: "Platform · Leaderboard",
+    status: "Coming soon",
+    started: 2026,
+    featured: true,
+    overview: [],
+    technologies: [],
+  },
+  {
     slug: "notafund",
     title: "NOTAFUND",
     tagline: "Privately owned. Independently operated.",

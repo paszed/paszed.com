@@ -19,6 +19,11 @@ export const projects = {
     artwork: "/projects/human50.svg",
     website: "https://human50.com",
   },
+  mrrmarkets: {
+    slug: "mrrmarkets",
+    artwork: "/projects/mrrmarkets.webp",
+    website: "https://mrrmarkets.com",
+  },
   notafund: {
     slug: "notafund",
     artwork: "/projects/notafund.svg",

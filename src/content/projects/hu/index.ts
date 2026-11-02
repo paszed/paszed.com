@@ -44,6 +44,18 @@ export const huProjects: ProjectsContent = {
     technologies: [],
   },
   {
+    slug: "mrrmarkets",
+    title: "MRR Markets",
+    tagline: "Climb the Leaderboard.",
+    summary: "Bevételi ranglista építőknek. Kövesd az előrehaladásodat, és versenyezz a legjobb helyekért. A bemutatkozó weboldal már él; a ranglista fejlesztés alatt áll.",
+    category: "Platform · Ranglista",
+    status: "Hamarosan",
+    started: 2026,
+    featured: true,
+    overview: [],
+    technologies: [],
+  },
+  {
     slug: "notafund",
     title: "NOTAFUND",
     tagline: "Magántulajdonban. Önálló működés.",
