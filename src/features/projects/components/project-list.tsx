@@ -25,6 +25,7 @@ function ProjectCard({ project, locale, labels, isPriority }: {
   const isHuman50 = project.slug === "human50";
   const isNotafund = project.slug === "notafund";
   const isMrrMarkets = project.slug === "mrrmarkets";
+  const isVaeluma = project.slug === "vaeluma";
 
   return (
     <Link
@@ -33,7 +34,7 @@ function ProjectCard({ project, locale, labels, isPriority }: {
       className="group flex h-full flex-col overflow-hidden rounded-xl border border-border bg-surface transition-colors duration-200 hover:border-fg-muted focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-fg"
     >
       <div
-        className={`relative flex aspect-[16/9] items-center justify-center overflow-hidden border-b border-border ${isHuman50 ? "bg-[#F7F5EF]" : isOxheaded ? "bg-[#121111]" : is1BuckSoft ? "bg-[#101010]" : isMrrMarkets ? "bg-[#04130e]" : isNotafund ? "bg-[#141615]" : "bg-[radial-gradient(ellipse_at_center,rgba(223,255,0,0.13)_0%,#102A2A_30%,#0D1C2C_60%,#071321_100%)]"}`}
+        className={`relative flex aspect-[16/9] items-center justify-center overflow-hidden border-b border-border ${isVaeluma ? "bg-[#09070e]" : isHuman50 ? "bg-[#F7F5EF]" : isOxheaded ? "bg-[#121111]" : is1BuckSoft ? "bg-[#101010]" : isMrrMarkets ? "bg-[#04130e]" : isNotafund ? "bg-[#141615]" : "bg-[radial-gradient(ellipse_at_center,rgba(223,255,0,0.13)_0%,#102A2A_30%,#0D1C2C_60%,#071321_100%)]"}`}
       >
         {project.artwork ? (
           <Image
@@ -43,7 +44,7 @@ function ProjectCard({ project, locale, labels, isPriority }: {
             height={372}
             priority={isPriority}
             sizes="(min-width: 768px) 50vw, 100vw"
-            className={`object-contain transition-transform duration-500 group-hover:scale-[1.035] ${isHuman50 ? "h-[76%] w-auto" : isOxheaded || is1BuckSoft ? "h-[78%] w-auto" : isMrrMarkets ? "h-[88%] w-auto" : isNotafund ? "h-auto w-[84%]" : "h-[65%] w-auto"}`}
+            className={`object-contain transition-transform duration-500 group-hover:scale-[1.035] ${isVaeluma ? "h-[48%] w-auto" : isHuman50 ? "h-[76%] w-auto" : isOxheaded || is1BuckSoft ? "h-[78%] w-auto" : isMrrMarkets ? "h-[88%] w-auto" : isNotafund ? "h-auto w-[84%]" : "h-[65%] w-auto"}`}
           />
         ) : null}
       </div>

@@ -22,6 +22,37 @@ export const huProjects: ProjectsContent = {
   },
   projects: [
   {
+    slug: "vaeluma",
+    title: "Vaeluma",
+    tagline: "Hét világ. Egy intelligencia.",
+    summary: "Magával ragadó MI-élmény hét összekapcsolódó világgal, az égi szimbolika, a jóslás, az alkímia, a mitológia és a felfedezés témáival.",
+    category: "MI · Immerszív élmény",
+    status: "Fejlesztés alatt",
+    started: 2026,
+    featured: true,
+    overview: [
+      "A Vaeluma hét összekapcsolódó világból álló, magával ragadó MI-élmény.",
+      "Minden világ más szimbolikus hagyományt mutat be hangulatos környezeteken, interaktív tárgyakon és közös társalgási intelligencián keresztül.",
+      "A projekt filmszerű 3D-felületeket ötvöz egy működő MI-munkakörnyezettel a hagyományos chatbotfelület helyett.",
+    ],
+    capabilities: [
+      "Hét összekapcsolódó tematikus világ",
+      "Interaktív 3D-környezetek",
+      "Közös társalgási MI-felület",
+      "Égi és szimbolikus témák felfedezése",
+      "Nyilvános bemutatkozó oldal és privát alkalmazás",
+    ],
+    technologies: [
+      { name: "Next.js", purpose: "Alkalmazáskeretrendszer és útvonalkezelés." },
+      { name: "React", purpose: "Interaktív felületarchitektúra." },
+      { name: "TypeScript", purpose: "Típusbiztos alkalmazásfejlesztés." },
+      { name: "Three.js", purpose: "Valós idejű 3D-megjelenítés." },
+      { name: "React Three Fiber", purpose: "React-alapú 3D-jelenetek." },
+      { name: "Tailwind CSS", purpose: "Felületstílusok." },
+    ],
+  },
+
+  {
     slug: "feedchamps",
     title: "FeedChamps",
     tagline: "A közösségi média versennyé válik.",

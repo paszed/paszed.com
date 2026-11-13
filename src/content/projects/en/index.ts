@@ -22,6 +22,37 @@ export const enProjects: ProjectsContent = {
   },
   projects: [
   {
+    slug: "vaeluma",
+    title: "Vaeluma",
+    tagline: "Seven worlds. One intelligence.",
+    summary: "An immersive AI experience built around seven interconnected worlds exploring celestial symbolism, divination, alchemy, mythology, and discovery.",
+    category: "AI · Immersive Experience",
+    status: "In development",
+    started: 2026,
+    featured: true,
+    overview: [
+      "Vaeluma is an immersive AI experience designed as a collection of seven interconnected worlds.",
+      "Each world explores a different symbolic tradition through atmospheric environments, interactive objects, and a shared conversational intelligence.",
+      "The project combines cinematic 3D interfaces with a functional AI workspace rather than a conventional chatbot interface.",
+    ],
+    capabilities: [
+      "Seven interconnected thematic worlds",
+      "Interactive 3D environments",
+      "Shared conversational AI interface",
+      "Celestial and symbolic exploration",
+      "Public landing page and private application workspace",
+    ],
+    technologies: [
+      { name: "Next.js", purpose: "Application framework and routing." },
+      { name: "React", purpose: "Interactive interface architecture." },
+      { name: "TypeScript", purpose: "Type-safe application development." },
+      { name: "Three.js", purpose: "Real-time 3D rendering." },
+      { name: "React Three Fiber", purpose: "React-based 3D scene composition." },
+      { name: "Tailwind CSS", purpose: "Interface styling." },
+    ],
+  },
+
+  {
     slug: "feedchamps",
     title: "FeedChamps",
     tagline: "Social media becomes a competition.",

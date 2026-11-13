@@ -9,6 +9,11 @@ export const projects = {
     artwork: "/projects/oxheaded.svg",
     website: "https://oxheaded.com",
   },
+  vaeluma: {
+    slug: "vaeluma",
+    artwork: "/projects/vaeluma-symbol.svg",
+    website: "https://vaeluma.com",
+  },
   feedchamps: {
     slug: "feedchamps",
     artwork: "/projects/feedchamps.svg",
